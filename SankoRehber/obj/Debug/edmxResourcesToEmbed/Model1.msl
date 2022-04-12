@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RehberModelStoreContainer" CdmEntityContainer="RehberEntities">
+    <EntitySetMapping Name="TblAdmin">
+      <EntityTypeMapping TypeName="RehberModel.TblAdmin">
+        <MappingFragment StoreEntitySet="TblAdmin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KULLANICIAD" ColumnName="KULLANICIAD" />
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblRehber">
+      <EntityTypeMapping TypeName="RehberModel.TblRehber">
+        <MappingFragment StoreEntitySet="TblRehber">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FİRMA_ADI" ColumnName="FİRMA ADI" />
+          <ScalarProperty Name="LOKASYON" ColumnName="LOKASYON" />
+          <ScalarProperty Name="DEPARTMAN" ColumnName="DEPARTMAN" />
+          <ScalarProperty Name="ADI" ColumnName="ADI" />
+          <ScalarProperty Name="SOYADI" ColumnName="SOYADI" />
+          <ScalarProperty Name="YETKİLİ" ColumnName="YETKİLİ" />
+          <ScalarProperty Name="DAHİLİ_1" ColumnName="DAHİLİ 1" />
+          <ScalarProperty Name="DAHİLİ_2" ColumnName="DAHİLİ 2" />
+          <ScalarProperty Name="DAHİLİ_3" ColumnName="DAHİLİ 3" />
+          <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+          <ScalarProperty Name="CEP_TELEFONU" ColumnName="CEP TELEFONU" />
+          <ScalarProperty Name="FAX_NO" ColumnName="FAX NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUser">
+      <EntityTypeMapping TypeName="RehberModel.TblUser">
+        <MappingFragment StoreEntitySet="TblUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KULLANICIAD" ColumnName="KULLANICIAD" />
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

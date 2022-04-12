@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RehberModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KULLANICIAD" Type="varchar" MaxLength="20" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TblRehber">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FİRMA ADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="LOKASYON" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEPARTMAN" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="SOYADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="YETKİLİ" Type="nvarchar" MaxLength="255" />
+          <Property Name="DAHİLİ 1" Type="varchar" MaxLength="255" />
+          <Property Name="DAHİLİ 2" Type="nvarchar" MaxLength="255" />
+          <Property Name="DAHİLİ 3" Type="nvarchar" MaxLength="255" />
+          <Property Name="TELEFON" Type="nvarchar" MaxLength="255" />
+          <Property Name="CEP TELEFONU" Type="nvarchar" MaxLength="255" />
+          <Property Name="FAX NO" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TblUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KULLANICIAD" Type="varchar" MaxLength="20" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="RehberModelStoreContainer">
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblRehber" EntityType="Self.TblRehber" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblUser" EntityType="Self.TblUser" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RehberModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KULLANICIAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblRehber">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FİRMA_ADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LOKASYON" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEPARTMAN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SOYADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="YETKİLİ" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DAHİLİ_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DAHİLİ_2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DAHİLİ_3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFON" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CEP_TELEFONU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FAX_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KULLANICIAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="RehberEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" />
+          <EntitySet Name="TblRehber" EntityType="Self.TblRehber" />
+          <EntitySet Name="TblUser" EntityType="Self.TblUser" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RehberModelStoreContainer" CdmEntityContainer="RehberEntities">
+          <EntitySetMapping Name="TblAdmin">
+            <EntityTypeMapping TypeName="RehberModel.TblAdmin">
+              <MappingFragment StoreEntitySet="TblAdmin">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="KULLANICIAD" ColumnName="KULLANICIAD" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblRehber">
+            <EntityTypeMapping TypeName="RehberModel.TblRehber">
+              <MappingFragment StoreEntitySet="TblRehber">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FİRMA_ADI" ColumnName="FİRMA ADI" />
+                <ScalarProperty Name="LOKASYON" ColumnName="LOKASYON" />
+                <ScalarProperty Name="DEPARTMAN" ColumnName="DEPARTMAN" />
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="SOYADI" ColumnName="SOYADI" />
+                <ScalarProperty Name="YETKİLİ" ColumnName="YETKİLİ" />
+                <ScalarProperty Name="DAHİLİ_1" ColumnName="DAHİLİ 1" />
+                <ScalarProperty Name="DAHİLİ_2" ColumnName="DAHİLİ 2" />
+                <ScalarProperty Name="DAHİLİ_3" ColumnName="DAHİLİ 3" />
+                <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+                <ScalarProperty Name="CEP_TELEFONU" ColumnName="CEP TELEFONU" />
+                <ScalarProperty Name="FAX_NO" ColumnName="FAX NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblUser">
+            <EntityTypeMapping TypeName="RehberModel.TblUser">
+              <MappingFragment StoreEntitySet="TblUser">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="KULLANICIAD" ColumnName="KULLANICIAD" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

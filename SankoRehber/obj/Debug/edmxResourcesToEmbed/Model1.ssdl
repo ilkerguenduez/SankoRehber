@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RehberModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KULLANICIAD" Type="varchar" MaxLength="20" />
+    <Property Name="SIFRE" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TblRehber">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FİRMA ADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="LOKASYON" Type="nvarchar" MaxLength="255" />
+    <Property Name="DEPARTMAN" Type="nvarchar" MaxLength="255" />
+    <Property Name="ADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="SOYADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="YETKİLİ" Type="nvarchar" MaxLength="255" />
+    <Property Name="DAHİLİ 1" Type="varchar" MaxLength="255" />
+    <Property Name="DAHİLİ 2" Type="nvarchar" MaxLength="255" />
+    <Property Name="DAHİLİ 3" Type="nvarchar" MaxLength="255" />
+    <Property Name="TELEFON" Type="nvarchar" MaxLength="255" />
+    <Property Name="CEP TELEFONU" Type="nvarchar" MaxLength="255" />
+    <Property Name="FAX NO" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TblUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KULLANICIAD" Type="varchar" MaxLength="20" />
+    <Property Name="SIFRE" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="RehberModelStoreContainer">
+    <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblRehber" EntityType="Self.TblRehber" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblUser" EntityType="Self.TblUser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
